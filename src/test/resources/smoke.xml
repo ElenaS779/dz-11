@@ -1,9 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Use tests automation">
 
-    <test name="API regression">
+    <groups>
+        <run>
+            <include name="SettersTest"/>
+            <include name="GettersTest"/>
+        </run>
+    </groups>
+    <test name="API SmokeTest">
         <classes>
-            <class name="TestsForGettersAndSetters"/>
+            <class name="TestsForMan"/>
+            <class name="TestsForWoman"/>
         </classes>
     </test>
 </suite>
